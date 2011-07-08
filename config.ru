@@ -4,8 +4,8 @@ require 'bundler'
 Bundler.require
 
 use Rack::Rewrite do
-  r301 %r{.*}, 'http://www.hepworthinc.com$&', :if => Proc.new {|rack_env|
-    rack_env['SERVER_NAME'] != 'www.hepworthinc.com'
+  r301 %r{.*}, 'http://www.peppyheppy.com$&', :if => Proc.new {|rack_env|
+    rack_env['SERVER_NAME'] != 'www.peppyheppy.com'
   }
 end
 
